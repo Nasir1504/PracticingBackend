@@ -16,6 +16,11 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 
+// Health check route
+app.get("/", (req, res) => {
+    res.status(200).json({ message: "Server is running" });
+});
+
 import userRouter from "./routes/user.routes.js";
 
 // routes declaration

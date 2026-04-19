@@ -17,7 +17,7 @@ app.use(cookieParser())
 
 
 // Health check route
-app.get("/", (req, res) => {
+app.get("/healthcheck", (req, res) => {
     res.status(200).json({ message: "Server is running" });
 });
 
